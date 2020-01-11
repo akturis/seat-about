@@ -2,6 +2,7 @@
 
 return [
     'about' => [
-        'view'
+        'view',
+        'settings'
     ]
 ];

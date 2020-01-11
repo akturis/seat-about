@@ -1,6 +1,6 @@
 <?php
 
-namespace Seat\Kassie\Calendar\Http\Controllers;
+namespace Seat\Akturis\About\Http\Controllers;
 
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
@@ -35,10 +35,10 @@ class AboutController extends Controller
      */
     public function index(Request $request)
     {
-        $info = AboutInfo::All();
+        $about = AboutInfo::first()->pluck('content');
 
         return view('about::about.index', [
-            'info'          => $info
+            'about'          => $about[0]
         ]);
     }
 
