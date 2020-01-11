@@ -1,0 +1,28 @@
+{
+    "name": "akturis/seat-about",
+    "description": "Plugin provide info about corporation/alliance",
+    "type": "seat-plugin",
+    "license": "GPL-2.0-only",
+    "authors": [
+        {
+            "name": "Akturis",
+            "email": "akturis@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Seat\\Akturis\\About\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Seat\\Akturis\\Anout\\AboutServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "eveseat/web": "^3.0"
+    }
+}
